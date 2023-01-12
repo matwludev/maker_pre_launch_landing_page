@@ -1,0 +1,114 @@
+@import '../config/colors';
+
+.plans {
+    .plans__textBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .plans__textBox-title {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: map-get($colors , plans_freeTitleText-color );
+        }
+
+        .plans__textBox-text{
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 8rem;
+            color: map-get($colors, plans_freeText-color);
+            text-align: center;
+        }
+    }
+
+    .plans__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .plans__planBox {
+            position: relative;
+            width: 100%;
+            background-color: map-get($colors , plans_freeBoxBg-color) ;
+            margin-bottom: 6.5rem;
+            border-radius: 1rem;
+            padding: 5rem 3rem 4rem;
+            color: map-get($colors , plans_freeTitleText-color );
+
+            .plans__icon {
+                position: absolute;
+                top: -2.3rem;
+                left: 3rem;
+            }
+            .plans__title {
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                font-weight: 800;
+                margin-bottom: 2rem;
+            }
+            .plans__description{
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                font-weight: 300;
+                margin-bottom: 3rem;
+                color: map-get($colors, plans_freeDescrText-color)
+            }
+            .plans__price {
+                display: inline-block;
+                font-size: 4rem;
+                margin-bottom: 2rem;
+                font-weight: 800;
+            }
+
+            .plans__benefitsList {
+                .plans__benefit{
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                    margin-bottom: 1rem;
+                    font-weight: 300;
+                    svg {
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+        }
+        .plans__planBox:nth-of-type(1) {
+            .plans__benefitsList {
+                .plans__benefit{
+                    svg {
+                        .fill {
+                            fill: map-get($colors, plans_freeCheckIcon-color )
+                        }
+                    }
+                }
+            }
+        }
+        .plans__planBox:nth-of-type(2) {
+            background-color: map-get($colors, plans_paidBoxBg-color );
+            color: map-get($colors, plans_paidTitleText-color);
+
+            .plans__icon {
+                top: -3.25rem;
+            }
+
+            .plans__description{
+                color: map-get($colors, plans_paidDescrText-color )
+            }
+
+            .plans__price {
+                display: flex;
+                align-items: center;
+
+                strong {
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

@@ -8,15 +8,15 @@
     .about__mobileIllustration {
         width: 100%;
         object-fit: contain;
+        margin-bottom: 5rem;
     }
     .about__titleText {
         color: map-get($colors, about_titleText-color );
         font-size: 3.2rem;
         line-height: 4rem;
         font-weight: 800;
-        margin: 4rem 2.5rem 3rem 2.5rem;
-        padding: 0 3rem;
         text-align: center;
+        padding: 0 3rem;
 
         span {
             color: map-get($colors, about_highlightText-color);
@@ -25,10 +25,10 @@
 
     .about__mainText {
         color: map-get($colors, about_mainText-color );
-        margin: 0 2.5rem 3rem 2.5rem;
         text-align: center;
         font-weight: 500;
         font-size: 1.5rem;
         line-height: 2.5rem;
+        margin: 2.5rem 0 3rem 0;
     }
 }

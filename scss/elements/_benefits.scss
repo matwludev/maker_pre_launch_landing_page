@@ -1,0 +1,57 @@
+@import '../config/colors';
+
+ .benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 14rem 2.4rem;
+
+    .benefits__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .benefits__box-imgWrapper{
+            position: relative;
+            background-color: map-get($colors , benefits_illustrationBg-color);
+            width: 12rem;
+            height: 12rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 35%;
+            margin-bottom: 3rem;
+
+            .benefits__box-img{
+                max-width: 6rem;
+            }
+
+        }
+        &:last-child .benefits__box-imgWrapper img {
+            max-width: 8rem;
+        }
+
+        .benefits__box-title {
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            font-weight: 800;
+            color: map-get($colors, benefits_title-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefits__box-text {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            font-weight: 500;
+            color: map-get($colors, benefits_text-color);
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        &:last-child .benefits__box-text {
+            margin-bottom: 0;
+        }
+    }
+ }

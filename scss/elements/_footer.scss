@@ -1,0 +1,83 @@
+@import '../config/colors';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+    background-image: url(../assets/bg-footer-squiggle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 8rem 0 16rem;
+
+        .footer__text {
+            color: map-get($colors, footer_titleText-color);
+            font-size: 2.4rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 800;
+        }
+        .footer__contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .footer__contact-wrapper {
+                width: 100%;
+                position: relative;
+
+                .footer__contact-email {
+                    width: 100%;
+                    background-color: map-get($colors, footer_inputBg-color);
+                    border: none;
+                    outline: none;
+                    padding: 1rem 0 1rem 2rem;
+                    color: map-get($colors, footer_inputText-color);
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                    font-weight: 800;
+                    border-radius: 5rem;
+                    margin-bottom: 2.5rem;
+                    &::placeholder {
+                        color: map-get($colors, footer_inputPlaceholder-color );
+                    }
+                    &:focus {
+                        box-shadow: inset -.2rem 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 -.2rem map-get($colors, footer_inputActiveBorder-color ), inset .2rem 0 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 .2rem 0 map-get($colors, footer_inputActiveBorder-color )
+                    }
+                }
+                .footer__contact-email.error {
+                    box-shadow: inset -.2rem 0 map-get($colors, footer_inputErrorBorder-color ), inset 0 -.2rem map-get($colors, footer_inputErrorBorder-color ), inset .2rem 0 0 map-get($colors, footer_inputErrorBorder-color ), inset 0 .2rem 0 map-get($colors, footer_inputErrorBorder-color );
+                }
+
+                .footer__contact-error {
+                    position: absolute;
+                    display: none;
+                    color: map-get($colors, footer_inputErrorText-color );
+                    bottom: .5rem;
+                    left: 2rem;
+                }
+            }
+            
+
+            .footer__contact-button {
+                background-color: map-get($colors, footer_buttonBg-color);
+                border: none;
+                width: 100%;
+                padding: 1rem;
+                color: map-get($colors, footer_buttonText-color);
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                font-weight: 800;
+                border-radius: 5rem;
+
+            }
+        }
+    }
+    //use it into desktop view ( not necessary into mobile and tablet)
+    // &:active {
+    //     background: none;
+    //     box-shadow: inset -.2rem 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 -.2rem map-get($colors, footer_inputActiveBorder-color ), inset .2rem 0 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 .2rem 0 map-get($colors, footer_inputActiveBorder-color );
+    //     color: map-get($colors, footer_titleText-color )
+    // }

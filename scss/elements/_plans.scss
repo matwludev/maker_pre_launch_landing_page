@@ -19,7 +19,7 @@
             line-height: 2.5rem;
             font-weight: 500;
             margin-bottom: 8rem;
-            color: map-get($colors, plans_freeText-color);
+            color: map-get($colors, plans_freeDescrText-color);
             text-align: center;
         }
     }
@@ -69,8 +69,8 @@
                     font-size: 1.5rem;
                     line-height: 2.5rem;
                     margin-bottom: 1rem;
-                    font-weight: 300;
-                    svg {
+                    font-weight: 500;
+                    svg { 
                         margin-right: 1.5rem;
                     }
                 }

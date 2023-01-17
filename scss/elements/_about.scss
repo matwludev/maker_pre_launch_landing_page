@@ -1,16 +1,65 @@
 @import '../config/colors';
 
 .about {
+    margin: 0 2.4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .about__mobileIllustration {
-        width: 100%;
-        object-fit: contain;
-        margin-bottom: 5rem;
+
+    @include tablet {
+        flex-direction: row;
+        margin: 0;
     }
-    .about__titleText {
+
+    .about__leftIllustrationBox {
+        display: none;
+        @include tablet {
+            display: block;
+            width: 20%;
+            min-height: 35rem;
+            background-image: url(../assets/illustration-hero-left.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+  
+        }
+    
+    .about__rightIllustrationBox {
+        display: none;
+        @include tablet {
+            display: block;
+            width: 20%;
+            min-height: 35rem;
+            background-image: url(../assets/illustration-hero-right.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+    }
+    
+
+    .about__centerWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include tablet {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(../assets/bg-hero-squiggle.svg);
+            background-size: 90% 90%;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 0 2rem;
+        }
+        
+    }
+    .about__centerWrapper .about__titleText {
         color: map-get($colors, about_titleText-color );
         font-size: 3.2rem;
         line-height: 4rem;
@@ -23,7 +72,7 @@
         }
     }
 
-    .about__mainText {
+    .about__centerWrapper .about__mainText {
         color: map-get($colors, about_mainText-color );
         text-align: center;
         font-weight: 500;

@@ -10,9 +10,6 @@
 
 body {
     background-color: map-get($colors, body_bg-color);
-    .pageWrapper {
-        margin: 0 2.4rem;
-    }
 }
 
 li {

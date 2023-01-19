@@ -226,6 +226,11 @@ li {
 .plans {
   margin: 0 2.4rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .plans {
+    margin: 0 10rem;
+  }
+}
 .plans .plans__textBox {
   display: flex;
   flex-direction: column;
@@ -252,6 +257,11 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .plans .plans__wrapper {
+    margin: 0 6.5rem;
+  }
 }
 .plans .plans__wrapper .plans__planBox {
   position: relative;

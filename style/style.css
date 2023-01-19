@@ -333,11 +333,18 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 3rem;
+  padding: 0 2.4rem;
   background-image: url(../assets/bg-footer-squiggle.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 8rem 2.4rem 16rem;
+  margin: 8rem 0 16rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    padding: 2rem 14rem;
+    margin: 6rem 0 14rem;
+    background-size: 100% 100%;
+  }
 }
 .footer .footer__text {
   color: hsl(0deg, 0%, 100%);
@@ -352,6 +359,11 @@ li {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer .footer__contact {
+    flex-direction: row;
+  }
 }
 .footer .footer__contact .footer__contact-wrapper {
   width: 100%;
@@ -376,6 +388,11 @@ li {
 .footer .footer__contact .footer__contact-wrapper .footer__contact-email:focus {
   box-shadow: inset -0.2rem 0 hsl(179deg, 80%, 58%), inset 0 -0.2rem hsl(179deg, 80%, 58%), inset 0.2rem 0 0 hsl(179deg, 80%, 58%), inset 0 0.2rem 0 hsl(179deg, 80%, 58%);
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer .footer__contact .footer__contact-wrapper .footer__contact-email {
+    margin-bottom: 0;
+  }
+}
 .footer .footer__contact .footer__contact-wrapper .footer__contact-email.error {
   box-shadow: inset -0.2rem 0 hsl(343deg, 100%, 58%), inset 0 -0.2rem hsl(343deg, 100%, 58%), inset 0.2rem 0 0 hsl(343deg, 100%, 58%), inset 0 0.2rem 0 hsl(343deg, 100%, 58%);
 }
@@ -385,6 +402,11 @@ li {
   color: hsl(343deg, 100%, 58%);
   bottom: 0.5rem;
   left: 2rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer .footer__contact .footer__contact-wrapper .footer__contact-error {
+    bottom: -2rem;
+  }
 }
 .footer .footer__contact .footer__contact-button {
   background-color: hsl(179deg, 80%, 58%);
@@ -396,6 +418,12 @@ li {
   line-height: 2.5rem;
   font-weight: 800;
   border-radius: 5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer .footer__contact .footer__contact-button {
+    width: 40%;
+    margin-left: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

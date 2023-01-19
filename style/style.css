@@ -101,6 +101,12 @@ li {
     width: 25%;
     min-height: 45rem;
     background-size: contain;
+    background-position: left;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about .about__leftIllustrationBox {
+    min-height: 65rem;
   }
 }
 .about .about__rightIllustrationBox {
@@ -122,6 +128,12 @@ li {
     width: 25%;
     min-height: 45rem;
     background-size: contain;
+    background-position: right;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about .about__rightIllustrationBox {
+    min-height: 65rem;
   }
 }
 .about .about__centerWrapper {
@@ -148,7 +160,8 @@ li {
   .about .about__centerWrapper {
     width: 50%;
     padding: 3rem 5rem;
-    background-size: 80% 100%;
+    background-size: 80% 90%;
+    background-position: top;
   }
 }
 .about .about__centerWrapper .about__titleText {
@@ -162,6 +175,18 @@ li {
 .about .about__centerWrapper .about__titleText span {
   color: hsl(179deg, 80%, 58%);
 }
+@media screen and (min-width: 1024px) {
+  .about .about__centerWrapper .about__titleText {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about .about__centerWrapper .about__titleText {
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+}
 .about .about__centerWrapper .about__mainText {
   color: hsl(225deg, 14%, 53%);
   text-align: center;
@@ -169,6 +194,17 @@ li {
   font-size: 1.5rem;
   line-height: 2.5rem;
   margin: 2.5rem 0 3rem 0;
+}
+@media screen and (min-width: 1024px) {
+  .about .about__centerWrapper .about__mainText {
+    margin: 2.5rem 0 6rem 0;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .about .about__centerWrapper .about__mainText {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
 }
 
 .benefits {
@@ -187,6 +223,11 @@ li {
 @media screen and (min-width: 1024px) {
   .benefits {
     flex-direction: row;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .benefits {
+    margin: 14rem 25rem;
   }
 }
 .benefits .benefits__box {
@@ -273,6 +314,12 @@ li {
   color: hsl(0deg, 0%, 100%);
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 1920px) {
+  .benefits .benefits__box .benefits__box-textWrapper .benefits__box-title {
+    font-size: 2.6rem;
+    line-height: 3.4rem;
+  }
+}
 .benefits .benefits__box .benefits__box-textWrapper .benefits__box-text {
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -283,6 +330,12 @@ li {
 @media screen and (min-width: 768px) {
   .benefits .benefits__box .benefits__box-textWrapper .benefits__box-text {
     text-align: start;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .benefits .benefits__box .benefits__box-textWrapper .benefits__box-text {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
 }
 .benefits .benefits__box .benefits__box-textWrapper:last-child {
@@ -300,6 +353,11 @@ li {
 @media screen and (min-width: 1024px) {
   .plans {
     margin: 0 26rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .plans {
+    margin: 0 40rem;
   }
 }
 .plans .plans__textBox {
@@ -320,6 +378,12 @@ li {
   margin-bottom: 3rem;
   color: hsl(0deg, 0%, 100%);
 }
+@media screen and (min-width: 1920px) {
+  .plans .plans__textBox .plans__textBox-title {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+}
 .plans .plans__textBox .plans__textBox-text {
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -327,6 +391,12 @@ li {
   margin-bottom: 8rem;
   color: hsl(225deg, 14%, 53%);
   text-align: center;
+}
+@media screen and (min-width: 1920px) {
+  .plans .plans__textBox .plans__textBox-text {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
 }
 .plans .plans__wrapper {
   display: flex;
@@ -372,12 +442,24 @@ li {
   font-weight: 800;
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 1920px) {
+  .plans .plans__wrapper .plans__planBox .plans__title {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
 .plans .plans__wrapper .plans__planBox .plans__description {
   font-size: 1.5rem;
   line-height: 2.5rem;
   font-weight: 300;
   margin-bottom: 3rem;
   color: hsl(225deg, 14%, 53%);
+}
+@media screen and (min-width: 1920px) {
+  .plans .plans__wrapper .plans__planBox .plans__description {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
 }
 .plans .plans__wrapper .plans__planBox .plans__price {
   display: inline-block;
@@ -393,6 +475,12 @@ li {
 }
 .plans .plans__wrapper .plans__planBox .plans__benefitsList .plans__benefit svg {
   margin-right: 1.5rem;
+}
+@media screen and (min-width: 1920px) {
+  .plans .plans__wrapper .plans__planBox .plans__benefitsList .plans__benefit {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
 }
 .plans .plans__wrapper .plans__planBox:nth-of-type(1) .plans__benefitsList .plans__benefit svg .fill {
   fill: hsl(179deg, 80%, 58%);
@@ -439,6 +527,11 @@ li {
   .footer {
     padding: 6rem 35rem;
     margin: 2rem 0 10rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .footer {
+    padding: 6rem 50rem;
   }
 }
 .footer .footer__text {

@@ -16,6 +16,10 @@
         flex-direction: row;
     }
 
+    @include lDesktop {
+        margin: 14rem 25rem;
+    }
+
     .benefits__box {
         display: flex;
         flex-direction: column;
@@ -95,6 +99,11 @@
                 font-weight: 800;
                 color: map-get($colors, benefits_title-color);
                 margin-bottom: 1rem;
+
+                @include lDesktop {
+                    font-size: 2.6rem;
+                    line-height: 3.4rem;
+                }
             }
     
             .benefits__box-text {
@@ -106,6 +115,11 @@
                 
                 @include tablet {
                     text-align: start;
+                }
+
+                @include lDesktop {
+                    font-size: 1.8rem;
+                    line-height: 2.4rem;
                 }
             }
     

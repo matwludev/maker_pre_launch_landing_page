@@ -12,6 +12,10 @@
         margin: 14rem 10rem;
     }
 
+    @include desktop {
+        flex-direction: row;
+    }
+
     .benefits__box {
         display: flex;
         flex-direction: column;
@@ -27,11 +31,26 @@
 
             &:nth-child(odd) {
                 margin-left: 5.5rem;
+                @include desktop {
+                    margin-left: 0;
+                }
             }
 
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+
+        @include desktop {
+            flex-direction: column;
+            width: 25%;
+            margin: 0 3rem 0 0;
+            align-items: flex-start;
+
+            &:nth-child(even){
+                margin-top: 5.5rem;
+            }
+
         }
 
         .benefits__box-imgWrapper{
@@ -47,9 +66,11 @@
 
             @include tablet {
                 margin: 0 5.5rem 0 0;
-
                 }
-
+            
+            @include desktop {
+                margin-bottom: 5rem;
+            }
             .benefits__box-img{
                 max-width: 6rem;
             }

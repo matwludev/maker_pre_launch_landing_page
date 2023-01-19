@@ -5,12 +5,18 @@
     @include tablet {
         margin: 0 10rem;
     }
+    @include desktop {
+        margin: 0 26rem;
+    }
     .plans__textBox {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
+        @include desktop {
+            padding: 0 19rem;
+        }
            .plans__textBox-title {
             font-size: 2.4rem;
             line-height: 3.2rem;
@@ -37,6 +43,12 @@
         @include tablet {
             margin: 0 6.5rem;
         }
+        @include desktop {
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+            justify-content: space-between;
+        }
         .plans__planBox {
             position: relative;
             width: 100%;
@@ -46,6 +58,9 @@
             padding: 5rem 3rem 4rem;
             color: map-get($colors , plans_freeTitleText-color );
 
+            @include desktop {
+                width: 49%;
+            }
             .plans__icon {
                 position: absolute;
                 top: -2.3rem;

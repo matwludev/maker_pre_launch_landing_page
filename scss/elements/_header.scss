@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0 6.5rem 0;
+
+    @include tablet {
+        justify-content: flex-start;
+        align-items: flex-start; 
+    }
+    
+    @include desktop {
+        justify-content: flex-start;
+        align-items: flex-start; 
+        margin: 0;
+    }
+    
+    .header__logo {
+        margin: 0;
+        @include tablet { 
+        margin-left: 4rem;
+        }
+        @include desktop {
+            margin: 8rem 0 11rem 16rem;
+        }
+    }
+    .about__mobileIllustration {
+        max-width: 100%;
+        margin: 6.5rem 0 5rem 0;
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+} 

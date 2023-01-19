@@ -1,0 +1,165 @@
+@import '../config/colors';
+
+.plans {
+    margin: 0 2.4rem;
+    @include tablet {
+        margin: 0 10rem;
+    }
+    @include desktop {
+        margin: 0 26rem;
+    }
+
+    @include lDesktop {
+        margin: 0 40rem;
+    }
+    .plans__textBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include desktop {
+            padding: 0 19rem;
+        }
+           .plans__textBox-title {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: map-get($colors , plans_freeTitleText-color );
+
+            @include lDesktop {
+                font-size: 3.2rem;
+                line-height: 4rem;
+            }
+        }
+
+        .plans__textBox-text{
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 8rem;
+            color: map-get($colors, plans_freeDescrText-color);
+            text-align: center;
+
+            @include lDesktop {
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+            }
+        }
+    }
+
+    .plans__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include tablet {
+            margin: 0 6.5rem;
+        }
+        @include desktop {
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+            justify-content: space-between;
+        }
+        .plans__planBox {
+            position: relative;
+            width: 100%;
+            background-color: map-get($colors , plans_freeBoxBg-color) ;
+            margin-bottom: 6.5rem;
+            border-radius: 1rem;
+            padding: 5rem 3rem 4rem;
+            color: map-get($colors , plans_freeTitleText-color );
+
+            @include desktop {
+                width: 49%;
+            }
+            .plans__icon {
+                position: absolute;
+                top: -2.3rem;
+                left: 3rem;
+            }
+            .plans__title {
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                font-weight: 800;
+                margin-bottom: 2rem;
+                @include lDesktop {
+                    font-size: 2.4rem;
+                    line-height: 3.2rem;
+                }
+                
+            }
+            .plans__description{
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                font-weight: 300;
+                margin-bottom: 3rem;
+                color: map-get($colors, plans_freeDescrText-color);
+
+                @include lDesktop {
+                    font-size: 1.8rem;
+                    line-height: 2.6rem;
+                }
+            }
+            .plans__price {
+                display: inline-block;
+                font-size: 4rem;
+                margin-bottom: 2rem;
+                font-weight: 800;
+            }
+
+            .plans__benefitsList {
+                .plans__benefit{
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                    svg { 
+                        margin-right: 1.5rem;
+                    }
+
+                    @include lDesktop {
+                        font-size: 1.8rem;
+                        line-height: 2.6rem;
+                    }
+                }
+            }
+        }
+        .plans__planBox:nth-of-type(1) {
+            .plans__benefitsList {
+                .plans__benefit{
+                    svg {
+                        .fill {
+                            fill: map-get($colors, plans_freeCheckIcon-color )
+                        }
+                    }
+                }
+            }
+        }
+        .plans__planBox:nth-of-type(2) {
+            background-color: map-get($colors, plans_paidBoxBg-color );
+            color: map-get($colors, plans_paidTitleText-color);
+
+            .plans__icon { 
+                top: -3.25rem;
+            }
+
+            .plans__description{
+                color: map-get($colors, plans_paidDescrText-color )
+            }
+
+            .plans__price {
+                display: flex;
+                align-items: center;
+
+                strong {
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+@import '../config/colors';
+
+ .benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 14rem 2.4rem;
+
+    @include tablet {
+        align-items: flex-start;
+        margin: 14rem 10rem;
+    }
+
+    @include desktop {
+        flex-direction: row;
+    }
+
+    @include lDesktop {
+        margin: 14rem 25rem;
+    }
+
+    .benefits__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-bottom: 4rem;
+            width: 80%;
+
+            &:nth-child(odd) {
+                margin-left: 5.5rem;
+                @include desktop {
+                    margin-left: 0;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @include desktop {
+            flex-direction: column;
+            width: 25%;
+            margin: 0 3rem 0 0;
+            align-items: flex-start;
+
+            &:nth-child(even){
+                margin-top: 5.5rem;
+            }
+
+        }
+
+        .benefits__box-imgWrapper{
+            position: relative;
+            background-color: map-get($colors , benefits_illustrationBg-color);
+            min-width: 12rem;
+            min-height: 12rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4rem;
+            margin-bottom: 3rem;
+
+            @include tablet {
+                margin: 0 5.5rem 0 0;
+                }
+            
+            @include desktop {
+                min-width: 16rem;
+                min-height: 16rem; 
+                margin-bottom: 5rem;
+            }
+            .benefits__box-img{
+                max-width: 6rem;
+            }
+
+        }
+        &:last-child .benefits__box-imgWrapper img {
+            max-width: 8rem;
+        }
+        .benefits__box-textWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 6rem;
+
+            @include tablet {
+                align-items: flex-start;
+            }
+            .benefits__box-title {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                font-weight: 800;
+                color: map-get($colors, benefits_title-color);
+                margin-bottom: 1rem;
+
+                @include lDesktop {
+                    font-size: 2.6rem;
+                    line-height: 3.4rem;
+                }
+            }
+    
+            .benefits__box-text {
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                font-weight: 500;
+                color: map-get($colors, benefits_text-color);
+                text-align: center;
+                
+                @include tablet {
+                    text-align: start;
+                }
+
+                @include lDesktop { 
+                    font-size: 1.8rem;
+                    line-height: 2.4rem;
+                }
+            }
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+ }

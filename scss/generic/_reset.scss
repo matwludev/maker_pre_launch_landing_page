@@ -1,4 +1,7 @@
 @import '../config/colors';
+:root {
+    font-size: 10px;
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,4 +10,8 @@
 
 body {
     background-color: map-get($colors, body_bg-color);
+}
+
+li {
+    list-style: none;
 }

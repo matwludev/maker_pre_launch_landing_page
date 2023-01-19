@@ -16,6 +16,11 @@
         margin: 6rem 0 14rem;
         background-size: 100% 100%;
     }
+
+    @include desktop {
+        padding: 6rem 35rem;
+        margin: 2rem 0 10rem;
+    }
         .footer__text {
             color: map-get($colors, footer_titleText-color);
             font-size: 2.4rem;
@@ -32,6 +37,10 @@
 
             @include tablet {
                 flex-direction: row;
+            }
+
+            @include desktop {
+                padding: 0 10rem;
             }
             .footer__contact-wrapper {
                 width: 100%;
@@ -87,6 +96,11 @@
                 line-height: 2.5rem;
                 font-weight: 800;
                 border-radius: 5rem;
+                &:active, &:hover {
+                    background: none;
+                    box-shadow: inset -.2rem 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 -.2rem map-get($colors, footer_inputActiveBorder-color ), inset .2rem 0 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 .2rem 0 map-get($colors, footer_inputActiveBorder-color );
+                     color: map-get($colors, footer_titleText-color )
+    }
 
                 @include tablet {
                     width: 40%;
@@ -96,8 +110,3 @@
         }
     }
     //use it into desktop view ( not necessary into mobile and tablet)
-    // &:active {
-    //     background: none;
-    //     box-shadow: inset -.2rem 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 -.2rem map-get($colors, footer_inputActiveBorder-color ), inset .2rem 0 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 .2rem 0 map-get($colors, footer_inputActiveBorder-color );
-    //     color: map-get($colors, footer_titleText-color )
-    // }

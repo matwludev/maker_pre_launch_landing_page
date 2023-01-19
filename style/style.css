@@ -140,22 +140,47 @@ li {
   align-items: center;
   margin: 14rem 2.4rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .benefits {
+    align-items: flex-start;
+    margin: 14rem 10rem;
+  }
+}
 .benefits .benefits__box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .benefits .benefits__box {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 4rem;
+    width: 80%;
+  }
+  .benefits .benefits__box:nth-child(odd) {
+    margin-left: 5.5rem;
+  }
+  .benefits .benefits__box:last-child {
+    margin-bottom: 0;
+  }
+}
 .benefits .benefits__box .benefits__box-imgWrapper {
   position: relative;
   background-color: hsl(206deg, 85%, 22%);
-  width: 12rem;
-  height: 12rem;
+  min-width: 12rem;
+  min-height: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4rem;
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .benefits .benefits__box .benefits__box-imgWrapper {
+    margin: 0 5.5rem 0 0;
+  }
 }
 .benefits .benefits__box .benefits__box-imgWrapper .benefits__box-img {
   max-width: 6rem;
@@ -163,22 +188,38 @@ li {
 .benefits .benefits__box:last-child .benefits__box-imgWrapper img {
   max-width: 8rem;
 }
-.benefits .benefits__box .benefits__box-title {
+.benefits .benefits__box .benefits__box-textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .benefits .benefits__box .benefits__box-textWrapper {
+    align-items: flex-start;
+  }
+}
+.benefits .benefits__box .benefits__box-textWrapper .benefits__box-title {
   font-size: 1.8rem;
   line-height: 2.4rem;
   font-weight: 800;
   color: hsl(0deg, 0%, 100%);
   margin-bottom: 1rem;
 }
-.benefits .benefits__box .benefits__box-text {
+.benefits .benefits__box .benefits__box-textWrapper .benefits__box-text {
   font-size: 1.5rem;
   line-height: 2.5rem;
   font-weight: 500;
   color: hsl(225deg, 14%, 53%);
   text-align: center;
-  margin-bottom: 6rem;
 }
-.benefits .benefits__box:last-child .benefits__box-text {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .benefits .benefits__box .benefits__box-textWrapper .benefits__box-text {
+    text-align: start;
+  }
+}
+.benefits .benefits__box .benefits__box-textWrapper:last-child {
   margin-bottom: 0;
 }
 

@@ -6,7 +6,7 @@ This is a solution to the [Maker pre-launch landing page challenge on Frontend M
 
 ### Links
 
-- Live Site URL: (XXX)
+- Live Site URL: https://matwludev.github.io/maker_pre_launch_landing_page/
 
 ## My process
 

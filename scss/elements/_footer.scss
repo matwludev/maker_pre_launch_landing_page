@@ -5,12 +5,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 3rem;
+    padding: 0 2.4rem;
     background-image: url(../assets/bg-footer-squiggle.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 8rem 2.4rem 16rem;
+    margin: 8rem 0 16rem; 
 
+    @include tablet {
+        padding: 2rem 14rem;
+        margin: 6rem 0 14rem;
+        background-size: 100% 100%;
+    }
         .footer__text {
             color: map-get($colors, footer_titleText-color);
             font-size: 2.4rem;
@@ -24,6 +29,10 @@
             justify-content: center;
             align-items: center;
             width: 100%;
+
+            @include tablet {
+                flex-direction: row;
+            }
             .footer__contact-wrapper {
                 width: 100%;
                 position: relative;
@@ -46,6 +55,10 @@
                     &:focus {
                         box-shadow: inset -.2rem 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 -.2rem map-get($colors, footer_inputActiveBorder-color ), inset .2rem 0 0 map-get($colors, footer_inputActiveBorder-color ), inset 0 .2rem 0 map-get($colors, footer_inputActiveBorder-color )
                     }
+
+                    @include tablet {
+                        margin-bottom: 0;                        
+                    }
                 }
                 .footer__contact-email.error {
                     box-shadow: inset -.2rem 0 map-get($colors, footer_inputErrorBorder-color ), inset 0 -.2rem map-get($colors, footer_inputErrorBorder-color ), inset .2rem 0 0 map-get($colors, footer_inputErrorBorder-color ), inset 0 .2rem 0 map-get($colors, footer_inputErrorBorder-color );
@@ -57,10 +70,13 @@
                     color: map-get($colors, footer_inputErrorText-color );
                     bottom: .5rem;
                     left: 2rem;
+
+                    @include tablet {
+                        bottom: -2rem;
+                    }
                 }
             }
             
-
             .footer__contact-button {
                 background-color: map-get($colors, footer_buttonBg-color);
                 border: none;
@@ -72,6 +88,10 @@
                 font-weight: 800;
                 border-radius: 5rem;
 
+                @include tablet {
+                    width: 40%;
+                    margin-left: 1.5rem;
+                }
             }
         }
     }
